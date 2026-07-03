@@ -1,0 +1,150 @@
+:root {
+    --pink: #ff2e7e;
+    --pink-dark: #d81b60;
+    --black: #121212;
+    --black-soft: #1c1c1c;
+    --gray-light: #f5f5f7;
+}
+
+body {
+    background-color: var(--gray-light);
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    min-height: 100vh;
+    background-color: var(--black);
+    color: #fff;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 1rem;
+}
+
+.sidebar .brand {
+    color: var(--pink);
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 0.75rem 1.25rem 1.5rem;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.sidebar a {
+    color: #cfcfcf;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: all .15s ease-in-out;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: var(--black-soft);
+    color: #fff;
+    border-left: 4px solid var(--pink);
+}
+
+.content-wrapper {
+    margin-left: 240px;
+    padding: 0;
+}
+
+/* ===== Topbar ===== */
+.topbar {
+    background-color: #fff;
+    border-bottom: 3px solid var(--pink);
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== Buttons ===== */
+.btn-pink {
+    background-color: var(--pink);
+    border-color: var(--pink);
+    color: #fff;
+}
+.btn-pink:hover {
+    background-color: var(--pink-dark);
+    border-color: var(--pink-dark);
+    color: #fff;
+}
+.btn-black {
+    background-color: var(--black);
+    border-color: var(--black);
+    color: #fff;
+}
+.btn-black:hover {
+    background-color: #000;
+    color: var(--pink);
+}
+
+/* ===== Card / Table ===== */
+.card-custom {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.table thead {
+    background-color: var(--black);
+    color: #fff;
+}
+
+.table thead th {
+    border-color: var(--black);
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background-color: #fff0f6;
+}
+
+.badge-pink {
+    background-color: var(--pink);
+    color: #fff;
+}
+
+.thumb {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--pink);
+}
+
+/* ===== Auth pages (login/register) ===== */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--black) 0%, var(--pink-dark) 100%);
+}
+
+.auth-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+.auth-card h3 {
+    color: var(--black);
+    font-weight: 700;
+}
+
+.auth-card h3 span {
+    color: var(--pink);
+}
+
+.form-control:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 0.2rem rgba(255,46,126,0.2);
+}
